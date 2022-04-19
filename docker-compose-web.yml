@@ -1,0 +1,17 @@
+# How to run:
+
+version: '2'
+services:
+  revivarqweb:
+    container_name: revivarqweb
+    build:
+      context: .
+      dockerfile: Dockerfile_web
+    image: revivarq-web:latest
+    ports:
+      - "4500:80"
+    networks:
+      - revivarq-network
+
+networks:
+    revivarq-network:
