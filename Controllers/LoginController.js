@@ -1,7 +1,7 @@
 const constants = require('../config/contants')
 const AuthManager = require('../Helpers/AuthManager')
 
-var jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 
 
 class LoginController {

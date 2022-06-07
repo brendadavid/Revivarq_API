@@ -10,14 +10,14 @@ class EmailSenderHelper {
    * @param {Destinatário} recipent 
    */
   static sendEmail(msg, subject, recipent) {
-    var transport = nodemailer.createTransport({
+    const transport = nodemailer.createTransport({
       service: constants.returnSMTPProvider,
       auth: {
         user: constants.returnEmailSender,
         pass: constants.returnPasswordSender
       }
     });
-    var mailOptions = {
+    const mailOptions = {
       from: constants.returnEmailSender, // sender address
       to: recipent, // list of receivers
       subject: subject, // Subject line

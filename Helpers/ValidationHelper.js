@@ -50,7 +50,7 @@ class ValidationHelper {
      * @return Boolean
      */
     static validCPF(cpf) {
-        var numeros, digitos, soma, i, resultado, digitos_iguais;
+        let numeros, digitos, soma, i, resultado, digitos_iguais;
         digitos_iguais = 1;
         if (cpf.length < 11)
             return false;
@@ -108,17 +108,17 @@ class ValidationHelper {
             return false;
 
         // Valida DVs
-        var tamanho = cnpj.length - 2
-        var numeros = cnpj.substring(0, tamanho);
-        var digitos = cnpj.substring(tamanho);
-        var soma = 0;
-        var pos = tamanho - 7;
-        for (var i = tamanho; i >= 1; i--) {
+        let tamanho = cnpj.length - 2
+        let numeros = cnpj.substring(0, tamanho);
+        const digitos = cnpj.substring(tamanho);
+        let soma = 0;
+        let pos = tamanho - 7;
+        for (let i = tamanho; i >= 1; i--) {
             soma += numeros.charAt(tamanho - i) * pos--;
             if (pos < 2)
                 pos = 9;
         }
-        var resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+        let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
         if (resultado != digitos.charAt(0))
             return false;
 

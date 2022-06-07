@@ -1,13 +1,13 @@
-var express = require('express')
-var multer  = require('multer')
-var fs = require('fs');
+const express = require('express')
+const multer  = require('multer')
+const fs = require('fs');
 const path = require('path')
 
 const routerPhoto = express.Router()
-var filePath
-var imageFiles = []
+let filePath
+const imageFiles = []
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname, '../files/uploads/'))
     },
@@ -32,8 +32,8 @@ routerPhoto.post('/', upload.array('avatar', 3) ,(req, res, next) => {
 })
 
 routerPhoto.get('/image', function (req, res) {
-  var pathImage = req.query.file;
-  var src = fs.createReadStream(path.join(__dirname, '../files/uploads/') + pathImage);
+  const pathImage = req.query.file;
+  const src = fs.createReadStream(path.join(__dirname, '../files/uploads/') + pathImage);
   console.log('teste: /image')
   console.log(src)
   src.on('open', function () {
@@ -47,8 +47,8 @@ routerPhoto.get('/image', function (req, res) {
 
 
 routerPhoto.delete('/image', function (req, res) {
-  var pathImage = req.query.file;
-  var src = fs.createReadStream(path.join(__dirname, '../files/uploads/') + pathImage);
+  const pathImage = req.query.file;
+  const src = fs.createReadStream(path.join(__dirname, '../files/uploads/') + pathImage);
   fs.unlink(src.path, (err) => {
     if (err) throw err;
     console.log(req.query.file, 'deleted!');

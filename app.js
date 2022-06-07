@@ -14,7 +14,7 @@ const photosRouter = require('./routes/photos')
 
 
 const TokenManager = require('./Helpers/AuthManager')
-var config = require('./config/config')
+const config = require('./config/config')
 
 // Initialize server
 // models.sequelize.sync().then(function() {
