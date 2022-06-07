@@ -77,8 +77,6 @@ class UserController {
             return callback(errorObj, null)
         }
 
-        //TODO: validar se o usuário que está cadastrando é um sup adm
-
         //Gera um salt aleatório
         let salt = UserController.randomSHA256(constants.minRandomNumber, constants.maxRandomNumber)
 
