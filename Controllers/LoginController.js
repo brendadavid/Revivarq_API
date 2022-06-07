@@ -19,7 +19,7 @@ class LoginController {
 
     static validateToken(req, callback) {
         AuthManager.containsToken(req)
-        jwt.verify(req.token, constants.APISecretKey, (error, data) => {
+        jwt.verify(req.token, constants.APISecretKey, (error, __data) => {
             if (error) {
                 callback(null, false)
             } else {
