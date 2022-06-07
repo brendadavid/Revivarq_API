@@ -5,7 +5,7 @@ const path = require('path')
 
 const routerPhoto = express.Router()
 let filePath
-const imageFiles = []
+let imageFiles = []
 
 const storage = multer.diskStorage({
     destination: function (cb) {
