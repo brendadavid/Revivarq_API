@@ -23,7 +23,7 @@ class EmailSenderHelper {
       subject: subject, // Subject line
       text: msg
     };
-    transport.sendMail(mailOptions, (error, info) => {
+    transport.sendMail(mailOptions, (error) => {
       if (error) {
         return console.log(error);
       }

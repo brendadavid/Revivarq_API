@@ -11,7 +11,7 @@ const instagram = new Instagram({
 });
 
 
-routerIg.get('/', function(req, res) {
+routerIg.get('/', function(res) {
     instagram.get('users/self/media/recent', (error, data) => {
         res.json(ResponseHelper.createResponse(error, data.data, res, false))
     });

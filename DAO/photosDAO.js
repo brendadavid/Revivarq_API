@@ -1,6 +1,6 @@
 const constants = require('../config/contants')
 
-function addPhoto(photo, callback) {
+function addPhoto(photo) {
     console.log(photo)
 }
 

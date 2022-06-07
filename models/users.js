@@ -42,7 +42,7 @@ module.exports = () => {
 
     schema.set('toJSON', {
         virtuals: true, // ativa a aparição de virtuals
-        transform: (doc, ret, options) => { // remove o id e o __v de queries realizadas
+        transform: () => { // remove o id e o __v de queries realizadas
             // delete ret._id;
         },
         versionKey: false // remove numero de versionamento do retorno de queries realizadas

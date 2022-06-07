@@ -8,10 +8,10 @@ let filePath
 const imageFiles = []
 
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
+    destination: function (cb) {
       cb(null, path.join(__dirname, '../files/uploads/'))
     },
-    filename: function (req, file, cb) {
+    filename: function (file, cb) {
       filePath = file.fieldname + '-' + Date.now()+Math.floor(Math.random() * (10 - 1 + 1)) + 1+'.jpeg'
       imageFiles.push(filePath)
       cb(null, filePath)
@@ -22,7 +22,7 @@ const upload = multer({
     storage: storage
 })
 
-routerPhoto.post('/', upload.array('avatar', 3) ,(req, res, next) => {
+routerPhoto.post('/', upload.array('avatar', 3) ,(req, res) => {
     console.log('headers',req.headers);
     console.log('req.body',req.body)
     console.log('files',req.files)
