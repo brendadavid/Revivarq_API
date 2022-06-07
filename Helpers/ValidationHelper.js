@@ -13,7 +13,7 @@ class ValidationHelper {
             WIDOWER: "Viúvo(a)",
             SEPARATE: "Separado(a)",
         }
-    };
+    }
 
     /**
      * Enum Status da reforma
@@ -25,7 +25,7 @@ class ValidationHelper {
             STOPPED: "Parado",
             APPROVED: "Aprovado",
         }
-    };
+    }
 
     /**
      * Validador de status da reforma
