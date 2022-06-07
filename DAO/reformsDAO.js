@@ -13,8 +13,8 @@ function fetchReforms(id, callback, getAll = false) {
             let errorObj = { statusDesc: error, statusCode: constants.errorCodeMongoose }
             return callback(errorObj, null)
         }
-        callback(null, reforms)
-        return
+
+        return callback(null, reforms)
     })
 }
 
@@ -31,8 +31,6 @@ function fetchReform(user, id, callback, getAll = false) {
                 callback(null, reformEach);
             }
         });
-
-        return
     })
 }
 
@@ -59,8 +57,8 @@ function findReform(id, callback) {
                 let errorObj = { statusDesc: constants.notFoundDesc, statusCode: constants.notFound }
                 return callback(errorObj, null)
             }
-            callback(null, reform)
-            return
+            
+            return callback(null, reform)
         })
 }
 
@@ -111,8 +109,7 @@ function updateReform(filteredReform, callback, isAdmin, callbackSendMail) {
                 if (!isAdmin) //manda email para o adm avisando a atualização
                     callbackSendMail()
 
-                callback(null, { message: constants.reformUpdated }) //retorna apenas uma mensagem de sucesso, talvez nem tenha necessidade...
-                return
+                return callback(null, { message: constants.reformUpdated })
             }
         })
 }

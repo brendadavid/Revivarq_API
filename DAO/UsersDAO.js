@@ -14,8 +14,7 @@ function fetchUsers(orderQuery, whereQuery, callback) {
             let errorObj = { statusDesc: error, statusCode: constants.errorCodeMongoose }
             return callback(errorObj, null)
         }
-        callback(null, users)
-        return
+        return callback(null, users)   
     })
 }
 
@@ -102,8 +101,7 @@ function updateUser(newUserData, callback) {
                 let errorObj = { statusDesc: constants.notFoundDesc, statusCode: constants.notFound }
                 return callback(errorObj, null)
             } else {
-                callback(null, { message: "Informações atualizadas com sucesso!" })
-                return
+                return callback(null, { message: "Informações atualizadas com sucesso!" })
             }
         })
 }
