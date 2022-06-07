@@ -80,8 +80,6 @@ const createUsers = (model) => {
 //OBS: imagem de exemplo para as reformas de testes cadastradas. deixei comentada pois é pesado e atrapalha ficar carregando toda vez q iniciar o node.
 //caso queiram carregar descomentem a linha abaixo e adicionem no array das photos de cada reforma abaixo antes de iniciar a API e gerar o banco.
 
-//const reformImage = fs.readFileSync('./models/reforma_example.jpg', 'base64')
-
 const createReformsData = (model) => {
   const reforms = new model({
     userId: "5d905fce9a095d76e654ffdb",

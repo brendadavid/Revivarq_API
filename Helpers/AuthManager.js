@@ -7,8 +7,6 @@ const sha256         = require('sha256')
 const UserModel = models['Users']
 
 
-// const users = db.sequelize.model('Users')
-
 class AuthManager {
     static ensureUserToken(req, res, next) {
         if(AuthManager.containsToken(req)) {
