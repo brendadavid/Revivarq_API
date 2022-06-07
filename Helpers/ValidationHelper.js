@@ -126,7 +126,7 @@ class ValidationHelper {
         numeros = cnpj.substring(0, tamanho);
         soma = 0;
         pos = tamanho - 7;
-        for (i = tamanho; i >= 1; i--) {
+        for (let i = tamanho; i >= 1; i--) {
             soma += numeros.charAt(tamanho - i) * pos--;
             if (pos < 2)
                 pos = 9;
