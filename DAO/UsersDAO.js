@@ -44,15 +44,12 @@ function findAdminUser(id, callback) {
             if (error) {
                 let errorObj = { statusDesc: error, statusCode: constants.errorCodeMongoose }
                 return callback(errorObj, null)
-            }
-            if (!user) {
+            } else if (!user) {
                 let errorObj = { statusDesc: constants.userNotFound, statusCode: constants.notFound }
                 return callback(errorObj, null)
             }
-            if (user.isAdmin) {
-                return true;
-            }
-            return false;
+
+            return user.isAdmin
         })
 }
 
