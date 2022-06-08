@@ -1,9 +1,15 @@
+# folders
 node_modules
-**/node_modules
-node_modules/
-package-lock.json
 build
+
+# debug
 npm-debug.log
+
+# enviroments
 .env
-.DS_Store
+
+# tests
 coverage
+
+# OS folders
+.DS_Store
