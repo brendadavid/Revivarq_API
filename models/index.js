@@ -33,7 +33,7 @@ const createAdminUser = (model) => {
     name: "admin",
     lastName: "master",
     email: "admin@gmail.com",
-    password: "mypassword", //123456
+    password: process.env.MYSQL_PASSWORD, //123456
     isAdmin: true,
     salt: "e53a1bf917fe9032dcb179d80cebded6be7eb62d2191d9f974f6ed5606104a9f",
     whatsapp: "5188679538"
