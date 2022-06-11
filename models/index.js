@@ -56,7 +56,7 @@ const createUsers = (model) => {
     name: "Paula",
     lastName: "Flores",
     email: "paula@gmail.com",
-    password: "def40564c5918d52e6ee4d879fbe9efad2d4fd28443c430813b950df7a74652a", //123456
+    password: process.env.MYSQL_PASSWORD, //123456
     salt: "d930ef5f6d3f54f3fb9143a865b63fac153e7a34fa1c6c66ac664078b15a0a6a",
     _id: "5d90603bb24343774eb0cb16",
     whatsapp: "5188679544"
@@ -66,7 +66,7 @@ const createUsers = (model) => {
     name: "Pedro",
     lastName: "Pedreira",
     email: "pedro@gmail.com",
-    password: "9bd166283888fbeafbc7e86e5776dd97f66048ec220e81c6ff0c038eaa658ca6",
+    password: process.env.MYSQL_PASSWORD,
     salt: "f086191e042679a54b1dfb1a5dbf1e367845ef391653d7752d3d25b08acefa28",
     _id: "5d90603bb24343774eb0cb17",
     whatsapp: "5188694832"
