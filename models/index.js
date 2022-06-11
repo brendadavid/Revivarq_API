@@ -46,7 +46,7 @@ const createUsers = (model) => {
     name: "João",
     lastName: "Silva",
     email: "joao@gmail.com",
-    password: "dcea7822b52064cc9de785b8ca79500d09a3ebf62efdda493b1592759b52e281", //123456
+    password: process.env.MYSQL_PASSWORD, //123456
     salt: "33445e5d356759846c91da17c564032becd783707f427863dc5de4f7c495589d",
     _id: "5d905fce9a095d76e654ffdb",
     whatsapp: "5188888538"
