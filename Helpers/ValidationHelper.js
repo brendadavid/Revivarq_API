@@ -114,7 +114,12 @@ class ValidationHelper {
      * @return Boolean
      */
     static validEmail(email) {
-        return !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        return !!email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test
+        ("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+         "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+
+         "aaaaaaaaaaaaaaa!"
+                         );)
     }
 
     /**
