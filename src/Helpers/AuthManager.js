@@ -35,10 +35,10 @@ class AuthManager {
             
             
             if(error) {
-                let errorObj = { statusDesc: error, statusCode: constants.errorCodeMongoose }
+                let errorObjt = { statusDesc: error, statusCode: constants.errorCodeMongoose }
                 
                
-                return callback(errorObj, null)
+                return callback(errorObjt, null)
                 
             }
             
