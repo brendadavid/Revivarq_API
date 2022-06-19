@@ -64,10 +64,10 @@ function findReform(id, callback) {
 
 function addReform(reform, callback, callbackSendMail) {
     const newReform = new ReformModel(reform)
-    newReform.save((error, reform) => {
-        if (reform) {
+    newReform.save((error, reforms) => {
+        if (reforms) {
             callbackSendMail()
-            callback(null, reform)
+            callback(null, reforms)
         }
         else {
             let errorObj = { statusDesc: error, statusCode: constants.errorCodeMongoose }
