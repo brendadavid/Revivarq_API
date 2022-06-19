@@ -59,11 +59,11 @@ function findAdminUser(id, callback) {
 function addUser(user, callback, doLogin) {
     const newUser = new UserModel(user)
 
-    newUser.save((error, user) => {
-        if (user && doLogin)
+    newUser.save((error, users) => {
+        if (users && doLogin)
             doLogin()
-        else if (user)
-            callback(null, user)
+        else if (users)
+            callback(null, users)
         else {
             const { code } = error
             if (code === constants.duplicateKey) { //email já cadastrado
