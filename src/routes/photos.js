@@ -8,6 +8,10 @@ let filePath
 let imageFiles = []
 
 const storage = multer.diskStorage({
+    storage: diskStorage,
+  limits: {
+     fileSize: 8000000 // Compliant: 8MB
+  }
     destination: function (cb) {
       cb(null, path.join(__dirname, '../files/uploads/'))
     },
